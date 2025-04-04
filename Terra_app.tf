@@ -41,7 +41,7 @@ resource "azurerm_app_service" "example" {
   app_service_plan_id = azurerm_app_service_plan.example.id
 
   site_config {
-    dotnet_framework_version =  "v6.0"
+     always_on = true
   }
   app_settings = {
     WEBSITE_RUN_FRON_PACKAGE = "1"
